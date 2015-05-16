@@ -1,0 +1,29 @@
+{
+  "name": "static cli",
+  "version": "1.0.0",
+  "description": "Static site source generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/edorsey/static-cli.git"
+  },
+  "author": "Eric Dorsey (eric@ericdorsey.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edorsey/static-cli/issues"
+  },
+  "homepage": "https://github.com/edorsey/static-cli#readme",
+  "dependencies": {
+    "ampersand-state": "^4.5.4",
+    "async": "^0.9.0",
+    "commander": "^2.8.1",
+    "js-yaml": "^3.3.1",
+    "morph": "^0.2.0"
+  },
+  "bin": {
+    "bd": "./bin/static"
+  }
+}
