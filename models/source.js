@@ -28,12 +28,3 @@ var Source = AmpersandState.extend({
 });
 
 module.exports = Source;
-
-title: Hello world!
-author: edorsey
-template: post.html
-collection: blog
-permalink: /2010/10/hello-world/
-year: 2010
-month: 10
-date: 2010-10-05
