@@ -1,5 +1,5 @@
 {
-  "name": "static cli",
+  "name": "static-cli",
   "version": "1.0.0",
   "description": "Static site source generator",
   "main": "index.js",
@@ -23,7 +23,8 @@
     "js-yaml": "^3.3.1",
     "morph": "^0.2.0"
   },
+  "preferGlobal": true,
   "bin": {
-    "bd": "./bin/static"
+    "static": "./bin/static"
   }
 }
