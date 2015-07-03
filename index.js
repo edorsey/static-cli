@@ -35,7 +35,6 @@ process.stdin.on('data', function(data) {
 
 process.stdin.on('end', function() {
   posts = JSON.parse(dataIn);
-  console.log(posts.length);
   writeFiles(posts);
 });
   
@@ -71,7 +70,6 @@ var writeFiles = function(posts) {
           return cb();
         }
         if (program.assets && result.image) {
-          console.log("HERE", result.image)
           request(result.image)
             .on('end', function() {
               writeFile(filename, result, cb);
@@ -90,12 +88,11 @@ var writeFiles = function(posts) {
 };
 
 writeFile = function(filename, result, cb) {
-  console.log("WRITE FILE", filename);
   var content, 
-      body;
+      body = "";
   
   fs.exists(program.location + filename + ".md", function(exists) {
-    if (!exists) return cb();
+    if (exists) return cb();
     if (result.body) {
       body = result.body;
       delete result.body;
